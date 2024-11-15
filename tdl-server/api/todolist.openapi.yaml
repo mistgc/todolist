@@ -1,0 +1,148 @@
+openapi: 3.0.1
+info:
+  title: todolist
+  description: ''
+  version: 1.0.0
+tags: []
+paths:
+  /user/register:
+    post:
+      summary: 用户注册 User Register
+      deprecated: false
+      description: ''
+      tags: []
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                  minLenght: 4
+                  maxLength: 64
+                password:
+                  type: string
+                  minLength: 4
+                  maxLength: 64
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+      security: []
+  /user/login:
+    post:
+      summary: 用户登录 User Login
+      deprecated: false
+      description: ''
+      tags: []
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                  minLength: 4
+                  maxLength: 64
+                password:
+                  type: string
+                  minLength: 4
+                  maxLength: 64
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+      security: []
+  /user/logout:
+    post:
+      summary: 用户登出 User Logout
+      deprecated: false
+      description: ''
+      tags: []
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+      security: []
+  /user/delete:
+    post:
+      summary: 用户永久注销 User Delete
+      deprecated: false
+      description: ''
+      tags: []
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+      security: []
+  /user/profile:
+    get:
+      summary: 用户信息 User Profile
+      deprecated: false
+      description: ''
+      tags: []
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+      security: []
+  /ping:
+    get:
+      summary: 连通性测试 Ping Pong
+      deprecated: false
+      description: ''
+      tags: []
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                required:
+                  - code
+                  - msg
+          headers: {}
+      security: []
+components:
+  schemas: {}
+  securitySchemes: {}
+servers: []
